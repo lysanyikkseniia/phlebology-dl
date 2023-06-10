@@ -1,0 +1,60 @@
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ noise (InputLayer)          [(None, 100)]             0         
+                                                                 
+ dense (Dense)               (None, 27)                2700      
+                                                                 
+ batch_normalization (BatchN  (None, 27)               108       
+ ormalization)                                                   
+                                                                 
+ leaky_re_lu (LeakyReLU)     (None, 27)                0         
+                                                                 
+ dense_1 (Dense)             (None, 50)                1400      
+                                                                 
+ batch_normalization_1 (Batc  (None, 50)               200       
+ hNormalization)                                                 
+                                                                 
+ Parameters_of_CV (Activatio  (None, 50)               0         
+ n)                                                              
+                                                                 
+ dense_2 (Dense)             (None, 6750)              344250    
+                                                                 
+ batch_normalization_2 (Batc  (None, 6750)             27000     
+ hNormalization)                                                 
+                                                                 
+ leaky_re_lu_1 (LeakyReLU)   (None, 6750)              0         
+                                                                 
+ reshape (Reshape)           (None, 150, 15, 3)        0         
+                                                                 
+ conv2d_transpose (Conv2DTra  (None, 150, 15, 3)       225       
+ nspose)                                                         
+                                                                 
+ batch_normalization_3 (Batc  (None, 150, 15, 3)       12        
+ hNormalization)                                                 
+                                                                 
+ leaky_re_lu_2 (LeakyReLU)   (None, 150, 15, 3)        0         
+                                                                 
+ conv2d_transpose_1 (Conv2DT  (None, 300, 30, 3)       225       
+ ranspose)                                                       
+                                                                 
+ batch_normalization_4 (Batc  (None, 300, 30, 3)       12        
+ hNormalization)                                                 
+                                                                 
+ leaky_re_lu_3 (LeakyReLU)   (None, 300, 30, 3)        0         
+                                                                 
+ conv2d_transpose_2 (Conv2DT  (None, 1500, 150, 2)     150       
+ ranspose)                                                       
+                                                                 
+ batch_normalization_5 (Batc  (None, 1500, 150, 2)     8         
+ hNormalization)                                                 
+                                                                 
+ leaky_re_lu_4 (LeakyReLU)   (None, 1500, 150, 2)      0         
+                                                                 
+ Images (Conv2DTranspose)    (None, 3000, 300, 1)      50        
+                                                                 
+=================================================================
+Total params: 376,340
+Trainable params: 362,670
+Non-trainable params: 13,670
